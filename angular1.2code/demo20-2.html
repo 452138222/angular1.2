@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo11-2 自定义指令</title>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript">
+       angular.module("myApp",[]).controller("test1",function($scope,$rootScope){
+             $scope.uname="hello:Tom";
+             $rootScope.uname='你好吗？王三';//定义父作用域的uname变量
+       })
+  </script>
+</head>
+<body  ng-app="myApp">
+     <div ng-controller="test1">
+         <p>{{uname}}</p>
+         <p>{{$parent.uname}}</p>
+     </div>
+     <hr>
+    
+</body>
+</html>

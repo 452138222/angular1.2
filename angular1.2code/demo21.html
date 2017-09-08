@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo12</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		angular.module("myApp",[])
+		.controller("myTest",function($scope){
+			$scope.output="没有提交数据";
+            $scope.check=function(e){
+               $scope.output="已经提交了数据"; 
+            };
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="myTest">
+	<form ng-submit="check()">
+	    <input type="text">
+	    <input type="submit" name="submit" value="提交">
+	</form>
+	<p>{{output}}</p>
+</body>
+
+</html>

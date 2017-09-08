@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>demo7</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	 <div ng-app="" ng-init="egg=6;count=12">
+		鸡蛋价格:<input type="text" ng-model="egg"><br>
+		数量:<input type="text" ng-model="count">
+		<p>总价:{{egg*count|currency}}</p>
+	</div>
+</body>
+</html>

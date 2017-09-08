@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo9-1 通过元素名调用指令</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+	 <my-test></my-test>
+     <script>
+        var app = angular.module("myApp", []);
+            app.directive("myTest", function() {//注意myTest是camel命名法<my-test></my-test>
+            return {
+              template : "<h1>自定义指令!</h1>"
+            };
+          });
+</script>
+
+</body>
+</html>

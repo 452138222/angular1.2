@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>demo8</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	 <div ng-app="" ng-init="names=['Tom','Jarry','Susan']">
+         <p>使用 ng-repeat 来循环数组:</p>
+         <ul>
+             <li ng-repeat="value in names">
+               {{ value }}
+             </li>
+        </ul>
+     </div>
+</body>
+</html>

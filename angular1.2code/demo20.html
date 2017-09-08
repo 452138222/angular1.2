@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>demo11 自定义指令</title>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript">
+       angular.module("myApp",[]).controller("test1",function($scope){
+             $scope.uname="hello:Tom";
+             $scope.message=[{"name":"王三","age":19,"sex":"男"},{"name":"李四","age":21,"sex":"女"}];
+       }).controller("test2",function($scope){
+             $scope.uname="你好吗?张三";
+             $scope.message="不同作用域的message";
+       });
+  </script>
+</head>
+<body  ng-app="myApp">
+     <div ng-controller="test1">
+         <p>{{uname}}</p>
+         <ul ng-repeat="value in message">
+             <li>
+               {{"姓名:"+value.name+" "+ "年龄:"+value.age+"性别:"+value.sex}}
+             </li>
+         </ul>
+     </div>
+     <hr>
+     <div ng-controller="test2">
+         <p>{{uname}}</p>
+         <p>{{message}}</p>
+     </div>
+</body>
+</html>

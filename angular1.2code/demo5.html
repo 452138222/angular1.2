@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>demo5</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	<div ng-init="score=[90,100,98,80,99]">
+		成绩表第三个成绩:{{score[2]}}
+	</div>
+	<div>ng-bind实现同样的功能:</div>
+	<div ng-init="score=[90,100,98,80,99]">
+		成绩表第三个成绩:
+		<span ng-bind="score[2]"></span>
+	</div>
+
+
+</body>
+</html>

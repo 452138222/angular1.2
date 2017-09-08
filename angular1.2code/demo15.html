@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo15</title>
+	<style>
+	   div{
+	   	width: 200px;
+	   	height: 200px;
+	   }
+	   .green{
+	   	background: #090;
+	    border-radius: 20px;
+	    color: #fff;
+	    font-weight: bold;
+	   }
+	   .red{
+	   	background: #900;
+	   	border-radius: 30px;
+	   	color:#090;
+	   	font-weight: bold;
+	   }
+	</style>
+	<script type="text/javascript" src="js/angular.min.js"></script>	
+</head>
+<body ng-app>
+	<select ng-model="key">
+		<option value="green">绿色主题</option>
+		<option value="red">红色主题</option>
+	</select>
+	<div ng-class="key">
+		<h2 align="center"> angularjs绑定class</h2>
+		<p align="center">好好学习，天天向上</p>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>demo4</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body>
+	 <div ng-init="name='王三';age=20;dept='计算机'">
+		学生信息:{{"姓名:"+name+"&nbsp;"+"年龄:"+age+"&nbsp;"+"系别:"+dept}}
+	</div>
+	<div>使用ng-bind实现同样的效果:</div>
+	<div  ng-init="name='王三';age=20;dept='计算机'">
+		学生信息:<span ng-bind='"姓名:"+name+"&nbsp;"+"年龄:"+age+"&nbsp;"+"系别:"+dept'></span>
+	</div>
+
+</body>
+</html>

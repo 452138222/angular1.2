@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo15-1</title>
+	<style>
+	   #bt1{
+	   	position: absolute;
+	   	top:230px;
+	   }
+	   .wh{
+	   	width: 200px;
+	   	height: 200px;
+	   	border:10px solid #900;
+	   }
+	   .green{
+	   	background: #090;
+	    border-radius: 20px;
+	    color: #fff;
+	    font-weight: bold;
+	   }
+
+	</style>
+	<script type="text/javascript" src="js/angular.min.js"></script>	
+	<script type="text/javascript">
+		angular.module("myApp",[])
+		.controller("myTest",function($scope){
+			$scope.applyClass=true;
+			$scope.change=function(){
+             if($scope.applyClass){
+             	$scope.applyClass=false;
+             }else{
+             	$scope.applyClass=true;
+             }
+			};
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="myTest">  
+		<div ng-class="{true:'wh',false:'green'}[applyClass]">
+			<h2 align="center"> angularjs绑定class</h2>
+			<p align="center">好好学习，天天向上</p>
+		</div>
+		<input id="bt1" type="button" ng-click="change();" value="点击修改applyClass值">
+</body>
+
+</html>
